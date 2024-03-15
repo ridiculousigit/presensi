@@ -2,7 +2,7 @@
     <title>Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="icon" type="image/png" href="{{ asset('vendor') }}/demo/img/bri_logo.png">
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor') }}/dist/css/adminx.css" media="screen" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
