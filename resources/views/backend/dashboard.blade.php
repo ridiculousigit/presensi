@@ -17,12 +17,12 @@
         <!-- Navigasi Breadcrumb -->
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb adminx-page-breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Dasbor</li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
         </nav>
 
         <div class="pb-3">
-            <h1>Dasbor</h1>
+            <h1>Dashboard</h1>
         </div>
 
         <div class="row">
@@ -39,7 +39,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button type="submit" class="btn btn-danger">Hasilkan Kode Kehadiran</button>
+                                        <button type="submit" class="btn btn-danger">Generate Kode Absen</button>
                                     </div>
                                 </div>
                             </div>
@@ -57,13 +57,13 @@
                     <br />
                     <div class="row">
                         <div class="col text-center">
-                            <!-- Pesan selamat datang dengan nama pengguna -->
-                            <h4>Selamat datang {{ $peran->name }}</h4>
                             <!-- Tampilan jam digital -->
                             <div class="digital_clock_wrapper">
-                                <div id="digit_clock_time"></div>
                                 <div id="digit_clock_date"></div>
+                                <div id="digit_clock_time"></div>
                             </div>
+                            <!-- Pesan selamat datang dengan nama pengguna -->
+                            <h3>Selamat datang, <strong>{{ $peran->name }}</strong> !</h3>
                         </div>
                     </div>
                     <!-- Periksa jika tidak ada kehadiran berlangsung -->
@@ -74,7 +74,7 @@
                     {{ csrf_field() }}
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="form-label">ID Asisten</label>
+                            <label class="form-label">ID Anggote</label>
                             <!-- Menampilkan ID asisten -->
                             <input value="{{ $peran->id_asisten }}" name="id_asisten"
                                 class="form-control mb-2 input-credit-card" type="text" readonly />
@@ -122,7 +122,7 @@
                             <!-- Tombol submit untuk kehadiran -->
                             @if (empty($cekAbsen))
                                 <div class="col text-center">
-                                    <button type="submit" class="btn btn-info">Kehadiran</button>
+                                    <button type="submit" class="btn btn-info">Absen Masuk</button>
                                 </div>
                             @endif
                         </div>
@@ -137,7 +137,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button type="submit" class="btn btn-warning">Clock Out</button>
+                                        <button type="submit" class="btn btn-warning">Absen Keluar</button>
                                     </div>
                                 </div>
                             </div>
