@@ -2,7 +2,7 @@
 
 The application utilizes a relational database structure to manage entities and their relationships. The following Entity-Relationship Diagram (ERD) provides a visual representation of the core tables and their associations:
 
-[https://i.imgur.com/oUeLDZy.jpg](https://i.imgur.com/oUeLDZy.jpg)
+![Gambar ERD](https://i.imgur.com/oUeLDZy.jpg)
 
 **Explanation:**
 
