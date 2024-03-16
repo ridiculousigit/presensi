@@ -1,3 +1,29 @@
+## Entity-Relationship Diagram (ERD)
+
+The application utilizes a relational database structure to manage entities and their relationships. The following Entity-Relationship Diagram (ERD) provides a visual representation of the core tables and their associations:
+
+[https://i.imgur.com/oUeLDZy.jpg](https://i.imgur.com/oUeLDZy.jpg)
+
+**Explanation:**
+
+* **Users:** Represents users of the system, including administrators and assistants. Attributes include user ID, name, email address, password, and role.
+* **Classes:** Stores information about available classes, such as class ID, name, level, department, and faculty.
+* **Subjects:** Represents subjects taught within classes. Attributes include subject ID, subject name, and subject code.
+* **Attendance:** Captures attendance data for assistants. Attributes include attendance ID, user ID (foreign key referencing Users table), subject ID (foreign key referencing Subjects table), date, login time, logout time, duration, and subject code.
+* **Assistants:** Stores details about teaching assistants. Attributes include assistant ID, name, photo path, email address, and joining date.
+
+**Relationships:**
+
+* A User can have many Attendance records.
+* A Class can have many Subjects.
+* A Subject belongs to one Class.
+* An Attendance record belongs to one User.
+* An Attendance record references one Subject.
+* An Assistant can have many Attendance records.
+* A Class can have many Assistants.
+
+This ERD serves as a foundational guide for the application's database design.
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
